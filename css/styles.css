@@ -1,6 +1,7 @@
 /* CUSTON PROPS */
 :ROOT {
   --primary: #ea625c;
+  --primary-dark: #c9514c;
   --text-color: #333
 }
 
@@ -53,6 +54,30 @@ img {
   margin-right: auto;
 }
 
+
+/* BUTTON */
+.button {
+  display: inline-block;
+  padding: 12px 38px;
+  border: 0;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+background-color: var(--primary-dark);
+}
+
+.button:active {
+  opacity: 0.6;
+}
+
 /* MAIN-CONTENT */
 .main-content {
   flex-grow: 1;
@@ -75,20 +100,20 @@ img {
   margin-right: auto;
 }
 
+.site-header-logo:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  }
+
+  .site-header-logo:active {
+    opacity: 0.6;
+  }
+
 .site-header-logo-img {
   display: block;
   width: 35px;
   height: 42px;
   object-fit: contain;
-}
-
-.site-header-logo:hover {
-opacity: 0.8;
-transition: opacity 0.3s ease;
-}
-
-.site-header-logo:active {
-  opacity: 0.6;
 }
 
 /* SITENAV */
@@ -114,9 +139,9 @@ transition: opacity 0.3s ease;
   padding-bottom: 3px;
   border-bottom: 3px solid transparent;
   font-size: 15px;
+  color: #333;
   text-decoration: none;
   transition: border-bottom 0.3s ease;
-  color: #333;
 }
 
 .sitenav-link:hover{
@@ -130,4 +155,54 @@ transition: opacity 0.3s ease;
   padding-bottom: 6px;
   border: 0;
   border-bottom: 1px solid #333;
+}
+
+
+/* HERO */
+.hero {
+  padding-top: 140px;
+  padding-bottom: 185px;
+  border-bottom: 2px solid #ddd;
+  background-image: url("../img/intro-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: left calc(50% + 550px) bottom;
+}
+
+
+/* LEAD-CTA */
+.lead-cta {
+  width: 100%;
+  max-width: 490px
+}
+
+.lead-cta-heading {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 50px;
+  line-height: 1.2;
+  color: black;
+}
+
+.lead-cta-text {
+  padding-left: 37px;
+  border-left: 3px solid #888;
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #777;
+}
+
+
+/* RETINA BG */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)
+only screen and (   min--moz-device-pixel-ratio: 2)
+only screen and (     -o-min-device-pixel-ratio: 2/1)
+only screen and (        min-device-pixel-ratio: 2)
+only screen and (                min-resolution: 192dpi)
+only screen and (                min-resolution: 2dppx) {
+
+  .hero {
+    background-image: url("../img/intro-bg@2x.jpg") ;
+  }
+
 }
